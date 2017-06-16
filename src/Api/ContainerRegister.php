@@ -2,17 +2,16 @@
 namespace ImmediateSolutions\Support\Api;
 
 use ImmediateSolutions\Support\Framework\ContainerPopulatorInterface;
+use ImmediateSolutions\Support\Framework\ContainerRegisterInterface;
 use ImmediateSolutions\Support\Framework\MiddlewareRegisterInterface;
 
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
  */
-class ContainerRegister extends \ImmediateSolutions\Support\Infrastructure\ContainerRegister
+class ContainerRegister implements ContainerRegisterInterface
 {
     public function register(ContainerPopulatorInterface $populator)
     {
-        parent::register($populator);
-
         $populator
             ->instance(MiddlewareRegisterInterface::class, MiddlewareRegister::class)
             ->initialize(AbstractProcessor::class, function(AbstractProcessor $processor){
