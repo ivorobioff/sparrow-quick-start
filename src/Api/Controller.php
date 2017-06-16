@@ -11,7 +11,7 @@ use Psr\Http\Message\ServerRequestInterface;
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
  */
-abstract class AbstractController implements ProtectableInterface
+abstract class Controller implements ProtectableInterface
 {
     /**
      * @var Reply

@@ -8,7 +8,7 @@ use ImmediateSolutions\Support\Framework\ContainerRegisterInterface;
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
  */
-abstract class AbstractContainerRegister implements ContainerRegisterInterface
+abstract class ContainerRegister implements ContainerRegisterInterface
 {
     /**
      * @param ContainerPopulatorInterface $populator
