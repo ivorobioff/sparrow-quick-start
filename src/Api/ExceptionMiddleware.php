@@ -2,11 +2,12 @@
 namespace ImmediateSolutions\Support\Api;
 
 use ImmediateSolutions\Support\Framework\ContainerInterface;
-use ImmediateSolutions\Support\Framework\EnvironmentInterface;
+use ImmediateSolutions\Support\Framework\ContextInterface;
 use ImmediateSolutions\Support\Framework\Exceptions\AbstractHttpException;
 use ImmediateSolutions\Support\Framework\MiddlewareInterface;
 use ImmediateSolutions\Support\Validation\Error;
 use ImmediateSolutions\Support\Validation\ErrorsThrowableCollection;
+use ImmediateSolutions\Support\Validation\PresentableException;
 use Psr\Http\Message\ServerRequestInterface;
 use Exception;
 use Psr\Http\Message\ResponseInterface;
@@ -28,9 +29,9 @@ class ExceptionMiddleware implements MiddlewareInterface
     private $logger;
 
     /**
-     * @var EnvironmentInterface
+     * @var ContextInterface
      */
-    private $environment;
+    private $context;
 
     /**
      * @param ContainerInterface $container
@@ -43,8 +44,8 @@ class ExceptionMiddleware implements MiddlewareInterface
             $this->logger = $container->get(LoggerInterface::class);
         }
 
-        if ($container->has(EnvironmentInterface::class)){
-            $this->environment = $container->get(EnvironmentInterface::class);
+        if ($container->has(ContextInterface::class)){
+            $this->context = $container->get(ContextInterface::class);
         }
     }
 
@@ -57,8 +58,8 @@ class ExceptionMiddleware implements MiddlewareInterface
     {
         try {
             $response = $next($request);
-        } catch (AbstractHttpException $ex) {
-            $response = $this->writeHttpException($ex);
+        } catch (AbstractHttpException $exception) {
+            $response = $this->writeHttpException($exception);
         } catch (ErrorsThrowableCollection $errors){
 
             $data = [];
@@ -72,13 +73,15 @@ class ExceptionMiddleware implements MiddlewareInterface
 
             $response = $this->responseFactory->create(['errors' => $data], 422);
 
-        } catch(Exception $exception) {
+        } catch (PresentableException $exception) {
+            $response = $this->writeException(400, $exception->getMessage());
+        }  catch(Exception $exception) {
 
             if ($this->logger){
                 $this->logger->critical($exception);
             }
 
-            if ($this->environment && $this->environment->isDevelopment()){
+            if ($this->context && $this->context->isDebug()){
                 $message = (string) $exception;
             } else {
                 $message = 'Internal Server Error';

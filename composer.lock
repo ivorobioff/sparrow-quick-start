@@ -899,12 +899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivorobioff/sparrow-framework.git",
-                "reference": "0b4aa1f407760180f886fb1bef1392164d42432c"
+                "reference": "f601f1e77fe2b3e76de9e6b56a9917affb48388d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/0b4aa1f407760180f886fb1bef1392164d42432c",
-                "reference": "0b4aa1f407760180f886fb1bef1392164d42432c",
+                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/f601f1e77fe2b3e76de9e6b56a9917affb48388d",
+                "reference": "f601f1e77fe2b3e76de9e6b56a9917affb48388d",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +929,7 @@
                     "email": "igor.vorobioff@gmail.com"
                 }
             ],
-            "time": "2017-06-16 11:50:13"
+            "time": "2017-06-16 15:54:20"
         },
         {
             "name": "immediate-solutions/support",
