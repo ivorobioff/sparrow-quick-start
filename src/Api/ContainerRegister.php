@@ -14,6 +14,7 @@ class ContainerRegister implements ContainerRegisterInterface
     {
         $populator
             ->instance(MiddlewareRegisterInterface::class, MiddlewareRegister::class)
+            ->instance(ResponseFactoryInterface::class, JsonResponseFactory::class)
             ->initialize(AbstractProcessor::class, function(AbstractProcessor $processor){
                 $processor->validate();
             });
