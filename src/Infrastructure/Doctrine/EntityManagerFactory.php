@@ -37,19 +37,20 @@ class EntityManagerFactory
             throw new RuntimeException('Unable to instantiate entity manager due to missing doctrine configuration.');
         }
 
+        $appPath = $config->get('app_path');
         $doctrine = $config->get('doctrine');
-        $packages = $container->get(ConfigInterface::class)->get('packages');
+        $packages = $config->get('packages');
 
         $em = EntityManager::create(
-            $config['connections'][$config['db']],
-            $this->createConfiguration($config['app_path'], $doctrine, $packages)
+            $doctrine['connections'][$doctrine['db']],
+            $this->createConfiguration($appPath, $doctrine, $packages)
         );
 
         $this->registerTypes(
-            $config['app_path'],
+            $appPath,
             $em->getConnection(),
             $packages,
-            $container->get(ConfigInterface::class)->get('doctrine.types', [])
+            array_get($doctrine, 'types', [])
         );
 
         return $em;
