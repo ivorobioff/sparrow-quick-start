@@ -1,6 +1,7 @@
 <?php
 namespace ImmediateSolutions\Support\Infrastructure\Doctrine;
 
+use ImmediateSolutions\Support\Framework\ConfigInterface;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\DescriberInterface;
 
 /**
@@ -8,14 +9,17 @@ use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\DescriberInterfa
  */
 class Describer implements DescriberInterface
 {
+    /**
+     * @var string
+     */
     private $appPath;
 
     /**
-     * @param string $appPath
+     * @param ConfigInterface $config
      */
-    public function __construct($appPath)
+    public function __construct(ConfigInterface $config)
     {
-        $this->appPath = $appPath;
+        $this->appPath = $config->get('app_apth');
     }
 
     /**

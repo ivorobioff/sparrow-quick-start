@@ -5,7 +5,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use ImmediateSolutions\Support\Core\Interfaces\ContainerInterface;
 use ImmediateSolutions\Support\Framework\ContainerPopulatorInterface;
 use ImmediateSolutions\Support\Framework\ContainerRegisterInterface;
-use ImmediateSolutions\Support\Infrastructure\Doctrine\DescriberFactory;
+use ImmediateSolutions\Support\Infrastructure\Doctrine\Describer;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\EntityManagerFactory;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\DescriberInterface;
 
@@ -25,6 +25,6 @@ class ContainerRegister implements ContainerRegisterInterface
         });
 
         $populator->service(EntityManagerInterface::class, new EntityManagerFactory());
-        $populator->instance(DescriberInterface::class, new DescriberFactory());
+        $populator->instance(DescriberInterface::class, Describer::class);
     }
 }
