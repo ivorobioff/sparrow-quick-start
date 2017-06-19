@@ -39,7 +39,7 @@ class EntityManagerFactory
 
         $appPath = $config->get('app_path');
         $doctrine = $config->get('doctrine');
-        $packages = $config->get('packages');
+        $packages = $config->get('packages', []);
 
         $em = EntityManager::create(
             $doctrine['connections'][$doctrine['db']],
