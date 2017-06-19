@@ -937,12 +937,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivorobioff/quick-start.git",
-                "reference": "cbaedf85acb83ea92729817bced7e0a4b8b1569b"
+                "reference": "c5536afcbd209bef2d4f9b638fef926c946252e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivorobioff/quick-start/zipball/cbaedf85acb83ea92729817bced7e0a4b8b1569b",
-                "reference": "cbaedf85acb83ea92729817bced7e0a4b8b1569b",
+                "url": "https://api.github.com/repos/ivorobioff/quick-start/zipball/c5536afcbd209bef2d4f9b638fef926c946252e1",
+                "reference": "c5536afcbd209bef2d4f9b638fef926c946252e1",
                 "shasum": ""
             },
             "require": {
@@ -975,7 +975,7 @@
                 }
             ],
             "description": "The framework agnostic libraries",
-            "time": "2017-06-16 14:50:51"
+            "time": "2017-06-19 07:16:07"
         },
         {
             "name": "nikic/fast-route",

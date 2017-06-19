@@ -8,6 +8,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\ORM\Configuration;
 use Doctrine\DBAL\Types\Type;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\CompositeDriver;
+use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\DescriberInterface;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\PackageDriver;
 use ImmediateSolutions\Support\Infrastructure\Doctrine\Metadata\SimpleDriver;
 use Symfony\Component\Finder\Finder;
@@ -33,21 +34,26 @@ class EntityManagerFactory
          */
         $config = $container->get(ConfigInterface::class);
 
+
         if (!$config->has('doctrine')){
             throw new RuntimeException('Unable to instantiate entity manager due to missing doctrine configuration.');
         }
 
-        $appPath = $config->get('app_path');
+        /**
+         * @var DescriberInterface $describer
+         */
+        $describer = $container->get(DescriberInterface::class);
+
         $doctrine = $config->get('doctrine');
         $packages = $config->get('packages', []);
 
         $em = EntityManager::create(
             $doctrine['connections'][$doctrine['db']],
-            $this->createConfiguration($appPath, $doctrine, $packages)
+            $this->createConfiguration($doctrine, $packages, $describer)
         );
 
         $this->registerTypes(
-            $appPath,
+            $describer,
             $em->getConnection(),
             $packages,
             array_get($doctrine, 'types', [])
@@ -57,12 +63,12 @@ class EntityManagerFactory
     }
 
     /**
-     * @param string $appPath
      * @param array $config
      * @param array $packages
+     * @param DescriberInterface $describer
      * @return Configuration
      */
-    private function createConfiguration($appPath, array $config, array $packages)
+    private function createConfiguration(array $config, array $packages, DescriberInterface $describer)
     {
         $setup = Setup::createConfiguration();
 
@@ -76,7 +82,7 @@ class EntityManagerFactory
         $setup->setAutoGenerateProxyClasses(array_get($config, 'proxy.auto', false));
 
         $setup->setMetadataDriverImpl(new CompositeDriver([
-            new PackageDriver($packages, new Describer($appPath)),
+            new PackageDriver($packages, $describer),
             new SimpleDriver(array_get($config, 'entities', []))
         ]));
 
@@ -99,16 +105,16 @@ class EntityManagerFactory
     }
 
     /**
-     * @param string $appPath
+     * @param DescriberInterface $describer
      * @param Connection $connection
      * @param array $packages
      * @param array $extra
      */
-    private function registerTypes($appPath, Connection $connection, array $packages, array $extra = [])
+    private function registerTypes(DescriberInterface $describer, Connection $connection, array $packages, array $extra = [])
     {
         foreach ($packages as $package) {
-            $path = $appPath.'/src/Infrastructure/DAL/' . str_replace('\\', '/', $package) . '/Types';
-            $typeNamespace = 'ImmediateSolutions\Infrastructure\DAL\\' . $package . '\Types';
+            $path = $describer->getTypePath($package);
+            $typeNamespace = $describer->getTypeNamespace($package);
 
             if (! file_exists($path)) {
                 continue;

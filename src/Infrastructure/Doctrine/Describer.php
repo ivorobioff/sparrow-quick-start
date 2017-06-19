@@ -44,4 +44,22 @@ class Describer implements DescriberInterface
     {
         return $this->appPath.'/src/Core/' . str_replace('\\', '/', $package) . '/Entities';
     }
+
+    /**
+     * @param string $package
+     * @return string
+     */
+    public function getTypeNamespace($package)
+    {
+        return 'ImmediateSolutions\Infrastructure\DAL\\' . $package . '\Types';
+    }
+
+    /**
+     * @param string $package
+     * @return string
+     */
+    public function getTypePath($package)
+    {
+        return $this->appPath.'/src/Infrastructure/DAL/' . str_replace('\\', '/', $package) . '/Types';
+    }
 }
