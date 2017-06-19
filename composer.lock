@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d49abec1f66aff637e0d64dc34b5006",
+    "content-hash": "f28941371e5aff637186485c9aff24c0",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -843,12 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "8a453435a2a11baf6743bdb4173970912c212486"
+                "reference": "9846d92ccdf60879fae90686a2ffe2261c17dbcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/8a453435a2a11baf6743bdb4173970912c212486",
-                "reference": "8a453435a2a11baf6743bdb4173970912c212486",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/9846d92ccdf60879fae90686a2ffe2261c17dbcb",
+                "reference": "9846d92ccdf60879fae90686a2ffe2261c17dbcb",
                 "shasum": ""
             },
             "require": {
@@ -891,7 +891,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-13 19:00:13"
+            "time": "2017-06-17 01:40:37"
         },
         {
             "name": "immediate-solutions/framework",
@@ -899,12 +899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivorobioff/sparrow-framework.git",
-                "reference": "f601f1e77fe2b3e76de9e6b56a9917affb48388d"
+                "reference": "06cbaf414d5a336307365f49f706f9eb2e1d363c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/f601f1e77fe2b3e76de9e6b56a9917affb48388d",
-                "reference": "f601f1e77fe2b3e76de9e6b56a9917affb48388d",
+                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/06cbaf414d5a336307365f49f706f9eb2e1d363c",
+                "reference": "06cbaf414d5a336307365f49f706f9eb2e1d363c",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +929,7 @@
                     "email": "igor.vorobioff@gmail.com"
                 }
             ],
-            "time": "2017-06-16 15:54:20"
+            "time": "2017-06-16 16:11:43"
         },
         {
             "name": "immediate-solutions/support",
@@ -1407,6 +1407,55 @@
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
             "time": "2017-06-07 14:09:28"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "3.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "295fa37f13dbc4bba200680d2f4ae2c4a1f77709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/295fa37f13dbc4bba200680d2f4ae2c4a1f77709",
+                "reference": "295fa37f13dbc4bba200680d2f4ae2c4a1f77709",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-01 21:02:15"
         },
         {
             "name": "symfony/inflector",
