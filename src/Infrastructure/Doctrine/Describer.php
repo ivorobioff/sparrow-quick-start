@@ -42,6 +42,6 @@ class Describer implements DescriberInterface
      */
     public function getEntityPath($package)
     {
-        return $this->appPath.'/Core/' . str_replace('\\', '/', $package) . '/Entities';
+        return $this->appPath.'/src/Core/' . str_replace('\\', '/', $package) . '/Entities';
     }
 }
