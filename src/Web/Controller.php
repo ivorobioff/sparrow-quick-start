@@ -2,7 +2,6 @@
 namespace ImmediateSolutions\Support\Web;
 
 use ImmediateSolutions\Support\Framework\ContainerInterface;
-use League\Plates\Engine;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response;
@@ -12,11 +11,6 @@ use Zend\Diactoros\Response;
  */
 abstract class Controller
 {
-    /**
-     * @var Engine
-     */
-    private $view;
-
     /**
      * @var ContainerInterface
      */
@@ -55,7 +49,7 @@ abstract class Controller
     {
         $response = new Response('php://memory', 200, ['Content-Type' => 'text/html']);
 
-        $response->getBody()->write($this->view->render($path, $parameters));
+        $response->getBody()->write($this->renderer->render($path, $parameters));
 
         return $response;
     }
