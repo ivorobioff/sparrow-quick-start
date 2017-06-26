@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f28941371e5aff637186485c9aff24c0",
+    "content-hash": "59628ae6286a9c0491343b625faa2ffc",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -283,12 +283,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "7181fafc832e90e866000b7cbe86aa0939cf2de0"
+                "reference": "def584bbe77586a16893352f1e700e18741e6440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/7181fafc832e90e866000b7cbe86aa0939cf2de0",
-                "reference": "7181fafc832e90e866000b7cbe86aa0939cf2de0",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/def584bbe77586a16893352f1e700e18741e6440",
+                "reference": "def584bbe77586a16893352f1e700e18741e6440",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +348,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-05-24 21:38:59"
+            "time": "2017-06-25 12:06:31"
         },
         {
             "name": "doctrine/dbal",
@@ -356,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "899c62bb579027c146b73f6b580c871eb669d310"
+                "reference": "03e17189c48a92bff9c5fd7d9242d13a15780d15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/899c62bb579027c146b73f6b580c871eb669d310",
-                "reference": "899c62bb579027c146b73f6b580c871eb669d310",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/03e17189c48a92bff9c5fd7d9242d13a15780d15",
+                "reference": "03e17189c48a92bff9c5fd7d9242d13a15780d15",
                 "shasum": ""
             },
             "require": {
@@ -421,7 +421,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-06-13 11:58:27"
+            "time": "2017-06-23 20:42:58"
         },
         {
             "name": "doctrine/inflector",
@@ -678,28 +678,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "fc67b398a1efd3d61837778e2cda2d05a395778c"
+                "reference": "388afb46d0cb3ed0c51332e8df0de9e942c2690b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/fc67b398a1efd3d61837778e2cda2d05a395778c",
-                "reference": "fc67b398a1efd3d61837778e2cda2d05a395778c",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/388afb46d0cb3ed0c51332e8df0de9e942c2690b",
+                "reference": "388afb46d0cb3ed0c51332e8df0de9e942c2690b",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "~1.2",
-                "doctrine/cache": "~1.5",
+                "doctrine/annotations": "~1.4",
+                "doctrine/cache": "~1.6",
                 "doctrine/collections": "^1.4",
                 "doctrine/common": "^2.7.1",
                 "doctrine/dbal": ">=2.5-dev,<2.7-dev",
                 "doctrine/instantiator": "~1.0.1",
                 "ext-pdo": "*",
-                "php": "^7.0",
-                "symfony/console": "~2.5|~3.0|~4.0"
+                "php": "^7.1",
+                "symfony/console": "~3.0|~4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0",
-                "symfony/yaml": "~2.3|~3.0|~4.0"
+                "symfony/yaml": "~3.0|~4.0"
             },
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
@@ -750,7 +750,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-06-12 22:20:57"
+            "time": "2017-06-24 07:17:55"
         },
         {
             "name": "illuminate/container",
@@ -801,12 +801,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "7b00c08c55ff25eb18d713c26a9e09e511ab42a3"
+                "reference": "a05b501d97ff5e0b82e0ef5408a40366ef5e0506"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/7b00c08c55ff25eb18d713c26a9e09e511ab42a3",
-                "reference": "7b00c08c55ff25eb18d713c26a9e09e511ab42a3",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/a05b501d97ff5e0b82e0ef5408a40366ef5e0506",
+                "reference": "a05b501d97ff5e0b82e0ef5408a40366ef5e0506",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-14 21:10:28"
+            "time": "2017-06-26 13:15:04"
         },
         {
             "name": "illuminate/support",
@@ -843,12 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "9846d92ccdf60879fae90686a2ffe2261c17dbcb"
+                "reference": "736a1236395294ac077bd0cdeeb7b01152017346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/9846d92ccdf60879fae90686a2ffe2261c17dbcb",
-                "reference": "9846d92ccdf60879fae90686a2ffe2261c17dbcb",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/736a1236395294ac077bd0cdeeb7b01152017346",
+                "reference": "736a1236395294ac077bd0cdeeb7b01152017346",
                 "shasum": ""
             },
             "require": {
@@ -891,7 +891,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-17 01:40:37"
+            "time": "2017-06-26 13:58:32"
         },
         {
             "name": "immediate-solutions/framework",
@@ -899,12 +899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivorobioff/sparrow-framework.git",
-                "reference": "06cbaf414d5a336307365f49f706f9eb2e1d363c"
+                "reference": "47c0de04425c39352b5cda55822f5ab82666dfef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/06cbaf414d5a336307365f49f706f9eb2e1d363c",
-                "reference": "06cbaf414d5a336307365f49f706f9eb2e1d363c",
+                "url": "https://api.github.com/repos/ivorobioff/sparrow-framework/zipball/47c0de04425c39352b5cda55822f5ab82666dfef",
+                "reference": "47c0de04425c39352b5cda55822f5ab82666dfef",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +929,7 @@
                     "email": "igor.vorobioff@gmail.com"
                 }
             ],
-            "time": "2017-06-16 16:11:43"
+            "time": "2017-06-23 15:09:44"
         },
         {
             "name": "immediate-solutions/support",
@@ -976,6 +976,61 @@
             ],
             "description": "The framework agnostic libraries",
             "time": "2017-06-19 07:16:07"
+        },
+        {
+            "name": "league/plates",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/plates.git",
+                "reference": "b1684b6f127714497a0ef927ce42c0b44b45a8af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/b1684b6f127714497a0ef927ce42c0b44b45a8af",
+                "reference": "b1684b6f127714497a0ef927ce42c0b44b45a8af",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 | ^7.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.4",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Plates\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Plates, the native PHP template system that's fast, easy to use and easy to extend.",
+            "homepage": "http://platesphp.com",
+            "keywords": [
+                "league",
+                "package",
+                "templates",
+                "templating",
+                "views"
+            ],
+            "time": "2016-12-28T00:14:17+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1288,12 +1343,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "bd7bf81dc914c7c7c01daad32946681c85ea16ae"
+                "reference": "0353f8aa5843d0cae051185514c0d877699704cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/bd7bf81dc914c7c7c01daad32946681c85ea16ae",
-                "reference": "bd7bf81dc914c7c7c01daad32946681c85ea16ae",
+                "url": "https://api.github.com/repos/symfony/console/zipball/0353f8aa5843d0cae051185514c0d877699704cc",
+                "reference": "0353f8aa5843d0cae051185514c0d877699704cc",
                 "shasum": ""
             },
             "require": {
@@ -1350,7 +1405,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-10 12:08:03"
+            "time": "2017-06-24 09:47:31"
         },
         {
             "name": "symfony/debug",
@@ -1638,12 +1693,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "add16d6319998977ee03af481ff523272c3933b1"
+                "reference": "764ce883728bedeffd67ecfe7f510df7ccdf0fea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/add16d6319998977ee03af481ff523272c3933b1",
-                "reference": "add16d6319998977ee03af481ff523272c3933b1",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/764ce883728bedeffd67ecfe7f510df7ccdf0fea",
+                "reference": "764ce883728bedeffd67ecfe7f510df7ccdf0fea",
                 "shasum": ""
             },
             "require": {
@@ -1698,7 +1753,7 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2017-06-02 09:54:06"
+            "time": "2017-06-24 09:47:31"
         },
         {
             "name": "symfony/yaml",
@@ -1706,12 +1761,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "08c644988dba9d608d18bb8ad8dd633f276137f7"
+                "reference": "1faeaf2aa8180967d80329213f77c1bcb75fe4fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/08c644988dba9d608d18bb8ad8dd633f276137f7",
-                "reference": "08c644988dba9d608d18bb8ad8dd633f276137f7",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1faeaf2aa8180967d80329213f77c1bcb75fe4fa",
+                "reference": "1faeaf2aa8180967d80329213f77c1bcb75fe4fa",
                 "shasum": ""
             },
             "require": {
@@ -1753,7 +1808,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-14 20:38:21"
+            "time": "2017-06-24 09:47:31"
         },
         {
             "name": "zendframework/zend-code",
