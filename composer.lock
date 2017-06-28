@@ -74,17 +74,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "7c830a576f9471f71096d200d633b6400513ccfb"
+                "reference": "2016f4e48149d8c1ce65eb25d7f641fb3760b40c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/7c830a576f9471f71096d200d633b6400513ccfb",
-                "reference": "7c830a576f9471f71096d200d633b6400513ccfb",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/2016f4e48149d8c1ce65eb25d7f641fb3760b40c",
+                "reference": "2016f4e48149d8c1ce65eb25d7f641fb3760b40c",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
@@ -93,7 +93,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -134,7 +134,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-05-25 15:48:57"
+            "time": "2017-06-28 04:31:58"
         },
         {
             "name": "doctrine/cache",
@@ -356,18 +356,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "03e17189c48a92bff9c5fd7d9242d13a15780d15"
+                "reference": "8e3159b3c7c4230b448b43c02338a24d9ed83165"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/03e17189c48a92bff9c5fd7d9242d13a15780d15",
-                "reference": "03e17189c48a92bff9c5fd7d9242d13a15780d15",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/8e3159b3c7c4230b448b43c02338a24d9ed83165",
+                "reference": "8e3159b3c7c4230b448b43c02338a24d9ed83165",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "^2.7.1",
                 "ext-pdo": "*",
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.4.6",
@@ -421,7 +421,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-06-23 20:42:58"
+            "time": "2017-06-28 04:51:02"
         },
         {
             "name": "doctrine/inflector",
@@ -801,12 +801,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "a05b501d97ff5e0b82e0ef5408a40366ef5e0506"
+                "reference": "45894219fc5bf6ea8a9640cdd7c121b402921357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/a05b501d97ff5e0b82e0ef5408a40366ef5e0506",
-                "reference": "a05b501d97ff5e0b82e0ef5408a40366ef5e0506",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/45894219fc5bf6ea8a9640cdd7c121b402921357",
+                "reference": "45894219fc5bf6ea8a9640cdd7c121b402921357",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-26 13:15:04"
+            "time": "2017-06-27 14:31:40"
         },
         {
             "name": "illuminate/support",
@@ -843,18 +843,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "736a1236395294ac077bd0cdeeb7b01152017346"
+                "reference": "e8ce8d5bfad34844f2c16be594a09ec044d44f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/736a1236395294ac077bd0cdeeb7b01152017346",
-                "reference": "736a1236395294ac077bd0cdeeb7b01152017346",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/e8ce8d5bfad34844f2c16be594a09ec044d44f88",
+                "reference": "e8ce8d5bfad34844f2c16be594a09ec044d44f88",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "~1.0",
                 "ext-mbstring": "*",
                 "illuminate/contracts": "5.5.*",
+                "nesbot/carbon": "^1.20",
                 "php": ">=7.0"
             },
             "replace": {
@@ -891,7 +892,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-26 13:58:32"
+            "time": "2017-06-28 02:32:32"
         },
         {
             "name": "immediate-solutions/framework",
@@ -937,12 +938,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivorobioff/quick-start.git",
-                "reference": "c5536afcbd209bef2d4f9b638fef926c946252e1"
+                "reference": "af85e4c2b541f4c1d4b286a6fd6abf0b20648b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivorobioff/quick-start/zipball/c5536afcbd209bef2d4f9b638fef926c946252e1",
-                "reference": "c5536afcbd209bef2d4f9b638fef926c946252e1",
+                "url": "https://api.github.com/repos/ivorobioff/quick-start/zipball/af85e4c2b541f4c1d4b286a6fd6abf0b20648b7c",
+                "reference": "af85e4c2b541f4c1d4b286a6fd6abf0b20648b7c",
                 "shasum": ""
             },
             "require": {
@@ -958,7 +959,8 @@
             "type": "libraries",
             "autoload": {
                 "psr-4": {
-                    "ImmediateSolutions\\Support\\": "./"
+                    "ImmediateSolutions\\Support\\": "./src",
+                    "ImmediateSolutions\\Support\\Tests\\": "./tests"
                 },
                 "files": [
                     "functions.php"
@@ -975,7 +977,7 @@
                 }
             ],
             "description": "The framework agnostic libraries",
-            "time": "2017-06-19 07:16:07"
+            "time": "2017-06-28 12:34:25"
         },
         {
             "name": "league/plates",
@@ -1031,6 +1033,59 @@
                 "views"
             ],
             "time": "2016-12-28T00:14:17+00:00"
+        },
+        {
+            "name": "nesbot/carbon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "926aee5ab38c2868816aa760f862a85ad01cb61a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/926aee5ab38c2868816aa760f862a85ad01cb61a",
+                "reference": "926aee5ab38c2868816aa760f862a85ad01cb61a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/translation": "~2.6 || ~3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2",
+                "phpunit/phpunit": "~4.0 || ~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.23-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Carbon\\": "src/Carbon/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Nesbitt",
+                    "email": "brian@nesbot.com",
+                    "homepage": "http://nesbot.com"
+                }
+            ],
+            "description": "A simple API extension for DateTime.",
+            "homepage": "http://carbon.nesbot.com",
+            "keywords": [
+                "date",
+                "datetime",
+                "time"
+            ],
+            "time": "2017-02-06 22:02:47"
         },
         {
             "name": "nikic/fast-route",
@@ -1754,6 +1809,71 @@
                 "reflection"
             ],
             "time": "2017-06-24 09:47:31"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "3.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "58a4b77b90a12d53e8ecc2113b54bd266624dc84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/58a4b77b90a12d53e8ecc2113b54bd266624dc84",
+                "reference": "58a4b77b90a12d53e8ecc2113b54bd266624dc84",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/config": "<2.8",
+                "symfony/yaml": "<3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8|~3.0|~4.0",
+                "symfony/intl": "^2.8.18|^3.2.5|~4.0",
+                "symfony/yaml": "~3.3|~4.0"
+            },
+            "suggest": {
+                "psr/log": "To use logging capability in translator",
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-24 16:45:46"
         },
         {
             "name": "symfony/yaml",

@@ -1,6 +1,7 @@
 <?php
 namespace ImmediateSolutions\Support\Web;
 
+use ImmediateSolutions\Support\Api\Reply;
 use ImmediateSolutions\Support\Framework\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -27,6 +28,11 @@ abstract class Controller
     protected $renderer;
 
     /**
+     * @var Reply
+     */
+    protected $reply;
+
+    /**
      * @param ContainerInterface $container
      */
     public function __construct(ContainerInterface $container)
@@ -34,6 +40,7 @@ abstract class Controller
         $this->container = $container;
         $this->request = $container->get(ServerRequestInterface::class);
         $this->renderer = $container->get(RendererInterface::class);
+        $this->reply = $container->get(Reply::class);
 
         if (method_exists($this, 'initialize')){
             $this->container->call([$this, 'initialize']);
