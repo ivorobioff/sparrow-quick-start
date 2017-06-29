@@ -3,6 +3,7 @@ namespace ImmediateSolutions\Support\Web;
 
 use ImmediateSolutions\Support\Framework\ContainerPopulatorInterface;
 use ImmediateSolutions\Support\Framework\ContainerRegisterInterface;
+use League\Plates\Engine;
 
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
@@ -27,6 +28,8 @@ class ContainerRegister implements ContainerRegisterInterface
      */
     public function register(ContainerPopulatorInterface $populator)
     {
-        $populator->service(RendererInterface::class, new RendererFactory($this->viewsPath));
+        $populator
+            ->instance(Engine::class, new EngineFactory($this->viewsPath))
+            ->service(RendererInterface::class, Renderer::class);
     }
 }

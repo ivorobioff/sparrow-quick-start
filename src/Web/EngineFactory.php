@@ -1,12 +1,12 @@
 <?php
 namespace ImmediateSolutions\Support\Web;
 
-use ImmediateSolutions\Support\Framework\ContainerInterface;
+use League\Plates\Engine;
 
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
  */
-class RendererFactory
+class EngineFactory
 {
     /**
      * @var string
@@ -21,12 +21,8 @@ class RendererFactory
         $this->viewsPath = $viewsPath;
     }
 
-    /**
-     * @param ContainerInterface $container
-     * @return RendererInterface
-     */
-    public function __invoke(ContainerInterface $container)
+    public function __invoke()
     {
-        return new Renderer($this->viewsPath);
+        return new Engine($this->viewsPath);
     }
 }

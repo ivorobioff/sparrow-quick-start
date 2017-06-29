@@ -14,11 +14,11 @@ class Renderer implements RendererInterface
     private $engine;
 
     /**
-     * @param string $viewsPath
+     * @param Engine  $engine
      */
-    public function __construct($viewsPath)
+    public function __construct(Engine $engine)
     {
-        $this->engine = new Engine($viewsPath);
+        $this->engine = $engine;
     }
 
     /**
