@@ -19,7 +19,7 @@ class Describer implements DescriberInterface
      */
     public function __construct(ConfigInterface $config)
     {
-        $this->appPath = $config->get('app_apth');
+        $this->appPath = $config->get('app_path');
     }
 
     /**
