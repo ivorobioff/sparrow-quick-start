@@ -60,4 +60,13 @@ abstract class Controller
 
         return $response;
     }
+
+    /**
+     * @param string $url
+     * @return ResponseInterface
+     */
+    protected function redirect($url)
+    {
+        return new Response('php://memory', 200, ['location' => $url]);
+    }
 }
