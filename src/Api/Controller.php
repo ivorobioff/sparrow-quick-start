@@ -1,16 +1,18 @@
 <?php
 namespace ImmediateSolutions\Support\Api;
+use ImmediateSolutions\Support\Api\Verify\VerifiableInterface;
 use ImmediateSolutions\Support\Framework\ContainerInterface;
 use ImmediateSolutions\Support\Pagination\AdapterInterface;
 use ImmediateSolutions\Support\Pagination\Describer;
 use ImmediateSolutions\Support\Pagination\PaginationProviderInterface;
 use ImmediateSolutions\Support\Pagination\Paginator;
+use ImmediateSolutions\Support\Permissions\ProtectableInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * @author Igor Vorobiov<igor.vorobioff@gmail.com>
  */
-abstract class Controller
+abstract class Controller implements ProtectableInterface, VerifiableInterface
 {
     /**
      * @var Reply
@@ -48,5 +50,13 @@ abstract class Controller
     public function paginator(AdapterInterface $adapter)
     {
         return new Paginator($adapter, new Describer($this->request));
+    }
+
+    /**
+     * @return bool
+     */
+    public function shouldVerify()
+    {
+        return true;
     }
 }
