@@ -12,6 +12,8 @@ class ActionMiddlewareRegister implements ActionMiddlewareRegisterInterface
 {
     public function register(MiddlewarePipeline $pipeline)
     {
-        $pipeline->add(PermissionsActionMiddleware::class);
+        $pipeline
+            ->add(VerifyActionMiddleware::class)
+            ->add(PermissionsActionMiddleware::class);
     }
 }
